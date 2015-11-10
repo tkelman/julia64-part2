@@ -1,9 +1,10 @@
 FROM tkelman/julia64-part1
 MAINTAINER Tony Kelman <tony@kelman.net>
 
-RUN DEPS="llvm libuv openlibm openspecfun utf8proc libgit2 pcre \
+WORKDIR /home/julia-x86_64
+RUN git pull && \
+    DEPS="llvm libuv openlibm openspecfun utf8proc libgit2 pcre \
           dsfmt Rmath-julia unwind gmp mpfr patchelf virtualenv" && \
-    cd /home/julia-x86_64 && git pull &&
     for dep in $DEPS; do \
       make -j2 -C deps install-$dep; \
     done && \
