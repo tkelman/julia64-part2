@@ -1,4 +1,4 @@
-FROM tkelman/julia64-part1
+FROM tkelman/julia64-part1:master
 MAINTAINER Tony Kelman <tony@kelman.net>
 
 WORKDIR /home/julia-x86_64
@@ -14,4 +14,3 @@ RUN git pull && \
     echo "# the following line is a hack to avoid rebuilding deps after distclean'ed" >> Make.user && \
     echo 'override DEP_LIBS =' >> Make.user
 # distclean should leave in place the installed libraries and headers
-
