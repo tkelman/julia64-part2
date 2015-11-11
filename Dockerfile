@@ -3,8 +3,8 @@ MAINTAINER Tony Kelman <tony@kelman.net>
 
 WORKDIR /home/julia-x86_64
 RUN git pull && \
-    DEPS="llvm libuv openlibm openspecfun utf8proc libgit2 \
-          fftw dsfmt Rmath-julia unwind patchelf virtualenv" && \
+    DEPS="llvm libuv openlibm openspecfun utf8proc fftw \
+          dsfmt Rmath-julia unwind patchelf virtualenv" && \
     INSTALL="" && DISTCLEAN="" && \
     for dep in $DEPS; do \
       INSTALL="$INSTALL install-$dep" && \
