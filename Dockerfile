@@ -15,4 +15,3 @@ RUN git pull && \
     echo "# the following line is a hack to avoid rebuilding deps after distclean'ed" >> Make.user && \
     echo 'override DEP_LIBS =' >> Make.user
 # distclean should leave in place the installed libraries and headers
-#
