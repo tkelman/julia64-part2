@@ -1,4 +1,4 @@
-FROM tkelman/julia64-part1:master
+FROM tkelman/julia64-part1:ubuntu1404
 MAINTAINER Tony Kelman <tony@kelman.net>
 
 WORKDIR /home/julia-x86_64
